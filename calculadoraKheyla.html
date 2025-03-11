@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/estiloKheyla.css">
-    <title>Calculadora financeira! </title>
-
+    <title>Calculadora Financeira</title>
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <h1>Simulador Financeiro</h1>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label for="investimento">Investimento inicial:</label>
+                <input type="number" id="investimento" placeholder="Digite o valor do investimento">
+            </div>
+
+            <div class="campo">
+                <label for="ManMensal">Custo mensal de manutenção:</label>
+                <input type="number" id="ManMensal" placeholder="Digite o custo mensal de manutenção">
+            </div>
+
+            <div class="campo">
+                <label for="EcoAnual">Economia anual com prevenção de vazamentos:</label>
+                <input type="number" id="EcoAnual" placeholder="Digite a economia anual">
+            </div>
+
+            <div class="campo">
+                <label for="tempo">Tempo estimado para o retorno do investimento (em meses):</label>
+                <input type="number" id="tempo" placeholder="Digite o tempo de retorno">
+            </div>
+
+        </form>
+    </div>
 </body>
+
+
 </html>
