@@ -6,8 +6,40 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/estiloMunir.css">
     <title>Calculadora financeira!</title>
+    <h1>Gás-Busters prevenindo a sua empresa petroquímica!</h1>
+    <h2>Veja o quanto a Gás-Busters pode te ajudar a economizar.</h2>
 </head>
+
 <body>
-    
+<label for="ipt_prejuizo">Insira a quantidade de acidentes que ocorreu na sua empresa</label>
+<input type="number" id="ipt_prejuizo">
+<br>
+<button onclick="economizar()">Quanto a Gás-Busters vai me ajudar?</button>
+
+<h3 id="h3_gasbusters"></h3>    
 </body>
+<script>
+function economizar(){
+var acidentes = Number(ipt_prejuizo.value)
+var economizando = acidentes * 9000000000
+
+h3_gasbusters.innerHTML = `Com o total de ${acidentes} acidentes, a Gás-Busters irá ajudar a economizar em 
+<br>
+R$${economizando}`
+
+if(economizando == 0){
+    h3_gasbusters.innerHTML = `É sempre bom quando não há acidentes, mas é importante se prevenir, 
+e a Gás-Busters está aqui justamente para isso!`
+}else if(economizando <= -1){
+    alert('Inválido! Coloque números acima ou igual a zero.')
+    h3_gasbusters.innerHTML = `Lembre-se de colocar um número de acidentes válido!`
+}
+}
+
+
+
+</script>
+
+
+
 </html>
