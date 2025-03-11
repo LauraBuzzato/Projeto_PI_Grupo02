@@ -67,5 +67,23 @@ input:focus {
     box-shadow: 0 0 5px #1f1088;
 }
 
+button {
+    padding: 15px;
+    background-color: #10085f;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin-top: 20px;
+}
 
+button:hover {
+    background-color: #100869;
+    transform: translateY(-3px);
+}
 
+button:active {
+    transform: translateY(1px);
+}
