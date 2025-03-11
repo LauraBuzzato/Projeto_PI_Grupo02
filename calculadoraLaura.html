@@ -9,5 +9,24 @@
 </head>
 <body>
     
+    <label for="ipt_acidentes">Quantos acidentes envolvendo fogo por conta de vazamento de gás já ocorreram na sua empresa?</label>
+    <input type="number" id="ipt_acidentes">
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
 </body>
+
+<script>
+    function calcular(){
+        var acidentes = Number(ipt_acidentes.value)
+        var valorGasto = (acidentes*9)
+
+        if(acidentes>0){
+            resultado.innerHTML = `Você já gastou em média com esse(s) acidente(s) R$${valorGasto} bilhões!<br>
+                                    Com a nossa proposta o sensor de gás avisaria sobre o vazamento antes do acidente acontecer, podendo diminuir a quantidade de acidentes para 0 acabando com todo esse gasto.`
+        }
+        else{
+            resultado.innerHTML = `Que bom que nenhum acidente aconteceu! Sabia que apenas um acidente pode te custar R$9 bilhôes?<br> Com a nossa proposta o sensor de gás vai te avisar sobre qualquer vazamento auxiliando sua empresa em manter com mais segurança o número de acidentes em 0.`
+        }
+    }
+</script>
 </html>
