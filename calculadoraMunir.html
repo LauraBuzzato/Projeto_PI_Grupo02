@@ -10,13 +10,15 @@
     <h2>Veja o quanto a Gás-Busters pode te ajudar a economizar.</h2>
 </head>
 
-<body>
+<body style="background-color: rgb(187, 47, 4); color: rgb(255, 255, 255);"></bodystyle>
 <label for="ipt_prejuizo">Insira a quantidade de acidentes que ocorreu na sua empresa</label>
 <input type="number" id="ipt_prejuizo">
 <br>
+<br>
 <button onclick="economizar()">Quanto a Gás-Busters vai me ajudar?</button>
 
-<h3 id="h3_gasbusters"></h3>    
+<h3 id="h3_gasbusters"></h3> 
+ 
 </body>
 <script>
 function economizar(){
@@ -24,15 +26,21 @@ var acidentes = Number(ipt_prejuizo.value)
 var economizando = acidentes * 9000000000
 
 h3_gasbusters.innerHTML = `Com o total de ${acidentes} acidentes, a Gás-Busters irá ajudar a economizar em 
-<br>
+<br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem"> 
+ 
 R$${economizando}`
 
 if(economizando == 0){
     h3_gasbusters.innerHTML = `É sempre bom quando não há acidentes, mas é importante se prevenir, 
-e a Gás-Busters está aqui justamente para isso!`
+e a Gás-Busters está aqui justamente para isso! 
+<br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem">
+`
+
 }else if(economizando <= -1){
     alert('Inválido! Coloque números acima ou igual a zero.')
-    h3_gasbusters.innerHTML = `Lembre-se de colocar um número de acidentes válido!`
+    h3_gasbusters.innerHTML = `Lembre-se de colocar um número de acidentes válido!
+    <br>
+    <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem">`
 }
 }
 
