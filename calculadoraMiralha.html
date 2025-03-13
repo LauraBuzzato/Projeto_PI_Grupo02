@@ -8,6 +8,41 @@
     <title>Calculadora financeira!</title>
 </head>
 <body>
-    
+            
+    <h1> Vamos análisar como sua empresa petroquímica está indo! </h1>
+    <h2> Esta calculadora serve para observar o quanto você teve de lucro ou prejuízo da empresa! </h2>
+
+    <br>
+
+    <div class="prejuízo">
+        <label> Quantos acidentes sua empresa ja teve com vazamentos de gáses?</label>
+        <input type="number" id="ipt_prejuizos">
+    </div>
+
+    <br>
+    <br>
+
+    <div class="investimento">
+        <label> Quanto foi investido na sua empresa? </label>
+        <input type="number" id="ipt_invest">
+    </div>
+
+    <br>
+    <br>
+
+    <button onclick="calculo()"> Verificar Empresa </button>
+
+    <div id="div_resultados"></div
+        
 </body>
+
+<script>
+    function calculo(){
+
+        var prejuizo = Number(ipt_prejuizos.value)
+        var investimento = Number(ipt_invest.value)
+
+        
+    }
+</script>
 </html>
