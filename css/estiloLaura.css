@@ -1,3 +1,118 @@
 body{
     background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.topo{
+    background-color:rgba(102, 1, 1, 0.95);
+    color: white;
+    position: absolute;
+    top: 0px;
+    height: 70px;
+    width: 1366px;
+}
+
+.logo{
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+
+.titulo{
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    left: 100px;
+}
+
+.botao_dados{
+    background-color: rgba(94, 2, 2, 1); 
+    color: white;
+    border: none;
+    border-radius: 30px 0 30px 0;
+    cursor: pointer;
+    height: 30px;
+    width: 125px;
+    position: absolute;
+    top: 18px;
+    right: 50px;
+}
+
+.rodape{
+    background-color: rgba(136, 1, 1, 0.68);
+    position: absolute;
+    bottom: 0px;
+    height: 75px;
+    width: 1366px;
+    color: white;
+
+}
+
+.contato{
+    margin: 0px;
+    position: absolute;
+    left: 20px;
+    bottom: 12px;
+    cursor: pointer;
+}
+
+.quem_somos{
+    margin: 0px;
+    position: absolute;
+    left: 639px;
+    bottom: 27px;
+    cursor: pointer;
+}
+
+.borda{
+    border: 3px solid rgba(102, 1, 1, 1);
+    width: 800px;
+    height: 390px;
+    border-radius: 50px;
+    position: absolute;
+    top: 90px;
+    left: 292px;
+
+}
+
+.pergunta{
+    position: absolute;
+    top: 160px;
+    left: 307px;
+}
+
+.caixa_numero{
+    position: absolute;
+    top: 245px;
+    left: 599px;
+    border-radius: 50px;
+    outline-color: rgba(102, 1, 1, 1);
+    border: solid rgba(102, 1, 1, 1);
+    background-color: rgba(217, 217, 217, 1);
+    text-align: center;
+    height: 37;
+}
+
+.botao_de_calculo{
+    position: absolute;
+    top: 288px;
+    left: 640px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: white;
+    background-color: rgba(102, 1, 1, 1);
+    height: 40px;
+    width: 100px;
+    border: solid rgba(102, 1, 1, 1);
+    outline-color: rgba(102, 1, 1, 1);
+}
+
+.texto_resultado{
+    text-align: center;
+    position: absolute;
+    top: 348px;
+    left: 415px;
+    right: 390px;
 }
