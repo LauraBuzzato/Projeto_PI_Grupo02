@@ -8,6 +8,44 @@
     <title>Calculadora financeira!</title>
 </head>
 <body>
+    <div class="top-bar">Oferecendo  segurança para sua empresa com a gás-busters</div>
+    <div class="bottom-bar">voltar para tela inicial</div>
+
+
+   <p><label><br>Quantos acidentes relacionados com vazamento de gás ja ocorreram na sua empresa?</label></p> 
+    <input type="number" id="ipt_acidentes">
+
+    <button onclick="calcular()">analisar o prejuizo</button>
+    <h3 id="resposta"></h3>
     
 </body>
+<script>
+    function calcular(){
+        var acidentes=Number(ipt_acidentes.value)
+        var totalAcidentes=(acidentes * 9000000000)
+
+        if(acidentes<0){
+            alert("Insira um valor válido")
+        }
+        else if(acidentes==0){
+            resposta.innerHTML=`Em sua empresa nunca ocorreu vazamento de gás, mas é melhor previnir, não é?<br>
+            contrate o serviço da gás-busters e evite acidentes<br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg">`
+        }
+
+        else{
+        resposta.innerHTML=`Tendo ocorrido ${acidentes} acidentes, sua empresa poderia ter tido um prejuizo equivalente a R$ ${totalAcidentes}.<br>
+        Com a gás-busters, perdas como essas não irão acontecer, fazendo com que sua empresa economize um grande valor, além de garantir a segurança dos funcionários <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg"> `
+
+    }
+}
+    
+
+
+
+
+
+
+
+
+</script>
 </html>
