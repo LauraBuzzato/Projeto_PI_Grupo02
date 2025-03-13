@@ -8,11 +8,24 @@
     <title>Calculadora financeira!</title>
 </head>
 <body>
-    
-    <label for="ipt_acidentes">Quantos acidentes envolvendo fogo por conta de vazamento de gás já ocorreram na sua empresa?</label>
-    <input type="number" id="ipt_acidentes">
-    <button onclick="calcular()">Calcular</button>
-    <div id="resultado"></div>
+    <div class="topo">
+        <img src="img/logo_sem_fundo.png" alt="" class="logo">
+        <h1 class="titulo">Gás-Busters</h1>
+        <button class="botao_dados">Dados</button>
+    </div>
+
+    <div class="borda">
+    </div>
+    <h3 class="pergunta">Quantos acidentes envolvendo fogo por conta de vazamento de gás já ocorreram na sua empresa?</h3>
+    <input type="number" id="ipt_acidentes" class="caixa_numero">
+    <button onclick="calcular()" class="botao_de_calculo">Calcular</button>
+    <div id="resultado" class="texto_resultado"></div>
+   
+
+    <div class="rodape">
+        <p class="contato">Informações de contato <br> Telefone: (11)94465-5562 <br> E-mail: bustersgas@gmail.com</p>
+        <p class="quem_somos">Quem somos?</p>
+    </div>
 </body>
 
 <script>
@@ -25,7 +38,7 @@
                                     Com a nossa proposta o sensor de gás avisaria sobre o vazamento antes do acidente acontecer, podendo diminuir a quantidade de acidentes para 0 acabando com todo esse gasto.`
         }
         else{
-            resultado.innerHTML = `Que bom que nenhum acidente aconteceu! Sabia que apenas um acidente pode te custar R$9 bilhôes?<br> Com a nossa proposta o sensor de gás vai te avisar sobre qualquer vazamento auxiliando sua empresa em manter com mais segurança o número de acidentes em 0.`
+            resultado.innerHTML = `Que bom que nenhum acidente aconteceu! Sabia que apenas um acidente pode te custar R$9 bilhões?<br> Com a nossa proposta o sensor de gás irá te informar sobre qualquer vazamento de gás, auxiliando sua empresa em manter, com mais segurança, o número de acidentes em 0.`
         }
     }
 </script>
