@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 body{
     background-color: rgb(255, 255, 255);
     margin: 0;
@@ -25,6 +30,8 @@ body{
     position: absolute;
     top: 15px;
     left: 100px;
+    font-family: "IM Fell English SC", serif;
+    font-size: 33px;
 }
 
 .botao_dados{
@@ -38,6 +45,8 @@ body{
     position: absolute;
     top: 18px;
     right: 50px;
+    font-family: "Afacad", sans-serif;
+    font-size: 17px;
 }
 
 .rodape{
@@ -56,14 +65,18 @@ body{
     left: 20px;
     bottom: 12px;
     cursor: pointer;
+    font-family: "ABeeZee", sans-serif;
+    font-size: 14px;
 }
 
 .quem_somos{
     margin: 0px;
     position: absolute;
-    left: 639px;
+    left: 647px;
     bottom: 27px;
     cursor: pointer;
+    font-family: "ABeeZee", sans-serif;
+    font-size: 14px;
 }
 
 .borda{
@@ -79,13 +92,16 @@ body{
 
 .pergunta{
     position: absolute;
-    top: 160px;
-    left: 307px;
+    top: 125px;
+    left: 326px;
+    text-align: center;
+    font-family: "ABeeZee", sans-serif;
+    font-size: 23px;
 }
 
 .caixa_numero{
     position: absolute;
-    top: 245px;
+    top: 240px;
     left: 599px;
     border-radius: 50px;
     outline-color: rgba(102, 1, 1, 1);
@@ -97,7 +113,7 @@ body{
 
 .botao_de_calculo{
     position: absolute;
-    top: 288px;
+    top: 290px;
     left: 640px;
     cursor: pointer;
     border-radius: 50px;
@@ -107,12 +123,24 @@ body{
     width: 100px;
     border: solid rgba(102, 1, 1, 1);
     outline-color: rgba(102, 1, 1, 1);
+    font-family: "ABeeZee", sans-serif;
+    font-size: 19px;
 }
 
 .texto_resultado{
     text-align: center;
     position: absolute;
-    top: 348px;
+    top: 360px;
     left: 415px;
     right: 390px;
+    font-family: "ABeeZee", sans-serif;
+
+}
+
+.valorGasto{
+    color: red;
+}
+
+.acidenteFinal{
+    color: red;
 }
