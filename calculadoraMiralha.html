@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/estiloMiralha.css">
+    <link rel="stylesheet" href="estiloMiralha.css">
     <title>Calculadora financeira!</title>
 </head>
 <body>
-            
-    <h1> Vamos análisar como sua empresa petroquímica está indo! </h1>
-    <h2> Esta calculadora serve para observar o quanto você teve de lucro ou prejuízo da empresa! </h2>
+    <div class="conteúdo">
+    <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="">
 
+    <div class="h1">
+        <h1> Vamos análisar como sua empresa petroquímica está indo! </h1>
+    </div>
+
+    <div class="h2">
+        <h2> Esta calculadora serve para observar o quanto você teve de lucro ou prejuízo da empresa! </h2>
+    </div>
+    
     <br>
 
     <div class="prejuízo">
         <label> Quantos acidentes sua empresa ja teve com vazamentos de gáses?</label>
+        <br>
+        <br>
         <input type="number" id="ipt_prejuizos">
     </div>
 
@@ -24,25 +33,66 @@
 
     <div class="investimento">
         <label> Quanto foi investido na sua empresa? </label>
+        <br>
+        <br>
         <input type="number" id="ipt_invest">
     </div>
 
     <br>
     <br>
 
-    <button onclick="calculo()"> Verificar Empresa </button>
+    <div class="button">
+        <button onclick="calculo()"> Verificar Empresa </button>
+    </div>
 
-    <div id="div_resultados"></div
-        
+    <br>
+
+    <div id="div_resultados" class="resultado"></div>
+    </div>
 </body>
 
 <script>
+    
     function calculo(){
 
         var prejuizo = Number(ipt_prejuizos.value)
         var investimento = Number(ipt_invest.value)
-
         
+        if (prejuizo >= 1){
+            
+            var calculo = prejuizo * 9000000000
+            var calculoTotal = ((prejuizo * 9000000000) + investimento)
+            
+            div_resultados.innerHTML = `
+            <br>
+            Seu prejuízo foi de R$ ${calculo}
+            <br>
+            <br>
+            Junto com o total de R$ ${investimento} investido na empresa, o prejuízo total foi de R$ ${calculoTotal}
+            <br>
+            <br>
+            Com os nossos serviços, você poderá previnir e evitar gastos e perdas como essas!!
+            `
+            
+        
+        } else if (prejuizo == 0){
+
+            div_resultados.innerHTML = `
+            <br>
+            Por enquanto sua empresa está sem qualquer tipo de prejuizo com acidentes de vazamentos de gáses
+            <br>
+            <br>
+            Por curiosidade, a média de prejuízo de um acidente de vazamento de gás é em torno de R$ 9.000.000.000
+            <br>
+            <br>
+            Muito bem!! Com nossos serviços poderá previnir ainda mais a causa de um acidente!!`
+
+
+        } else {
+       
+            alert ("Insira um número válido de acidentes!!")
+            
+        } 
     }
 </script>
 </html>
