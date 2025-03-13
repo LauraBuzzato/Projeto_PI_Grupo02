@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/estiloMunir.css">
+    <link rel="stylesheet" href="estiloMunir.css">
     <title>Calculadora financeira!</title>
+    <div class="h1">
     <h1>Gás-Busters prevenindo a sua empresa petroquímica!</h1>
+    </div>
+    <div class="h2">
     <h2>Veja o quanto a Gás-Busters pode te ajudar a economizar.</h2>
+    </div>
 </head>
 
 <body>
+<div class="label">
 <label for="ipt_prejuizo">Insira a quantidade de acidentes que ocorreu na sua empresa</label>
 <input type="number" id="ipt_prejuizo">
+</div>
 <br>
 <br>
+<div class="button">
 <button onclick="economizar()">Quanto a Gás-Busters vai me ajudar?</button>
+</div>
 
-<h3 id="h3_gasbusters"></h3> 
+<h3 id="h3_gasbusters" class="h3"></h3> 
  
 </body>
 <script>
@@ -26,20 +34,20 @@ var acidentes = Number(ipt_prejuizo.value)
 var economizando = acidentes * 9000000000
 
 h3_gasbusters.innerHTML = `Com o total de ${acidentes} acidentes, a Gás-Busters irá ajudar a economizar em 
-<br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem"> 
- 
-R$${economizando}`
+<br> R$${economizando}<br>  <br> 
+ <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem"> 
+ `
 
 if(economizando == 0){
     h3_gasbusters.innerHTML = `É sempre bom quando não há acidentes, mas é importante se prevenir, 
 e a Gás-Busters está aqui justamente para isso! 
-<br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem">
+<br> <br> <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem">
 `
 
 }else if(economizando <= -1){
     alert('Inválido! Coloque números acima ou igual a zero.')
     h3_gasbusters.innerHTML = `Lembre-se de colocar um número de acidentes válido!
-    <br>
+    <br> <br>
     <img src="https://github.com/LauraBuzzato/Projeto_PI_Grupo02/blob/main/img/logo.png?raw=true.jpg" alt="Gás-busters imagem">`
 }
 }
@@ -47,7 +55,6 @@ e a Gás-Busters está aqui justamente para isso!
 
 
 </script>
-
 
 
 </html>
