@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilo_gasbusters.css">
+    <title>Calculadora financeira!</title>
+</head>
+<body>
+    <div class="topo">
+        <img src="img/logo_sem_fundo.png" alt="" class="logo">
+        <p class="titulo">Gás-Busters</p>
+        <button class="botao_dados">Dados</button>
+    </div>
+
+    <div class="borda">
+    </div>
+    <h3 class="pergunta">Quantos acidentes envolvendo fogo por conta de vazamento de gás<br> já ocorreram na sua empresa?</h3>
+    <input type="number" id="ipt_acidentes" class="caixa_numero">
+    <button onclick="calcular()" class="botao_de_calculo">Calcular</button>
+    <div id="resultado" class="texto_resultado"></div>
+   
+
+    <div class="rodape">
+        <p class="contato">Informações de contato <br> Telefone: (11)94465-5562 <br> E-mail: bustersgas@gmail.com</p>
+        <p class="quem_somos">Quem somos?</p>
+    </div>
+    <u></u>
+</body>
+
+<script>
+    function calcular(){
+        var acidentes = Number(ipt_acidentes.value)
+        var valorGasto = (acidentes*9)
+
+        if(acidentes>0){
+            resultado.innerHTML = `Você já gastou em média com esse(s) acidente(s) <span class="valorGasto"><u>
+                                    R$${valorGasto} bilhões</u></span>!<br>
+                                    Com a nossa proposta o sensor de gás irá avisar sobre o vazamento antes do acidente acontecer, podendo diminuir a quantidade de acidentes para <span class="acidenteFinal"><u>0</u></span> acabando com todo esse gasto.<br>
+                                    Com a gás-busters, perdas como essas não irão acontecer,além de garantir a segurança dos funcionários.`
+        }
+        else if(acidentes==0){
+            resultado.innerHTML = `Que bom que nenhum acidente aconteceu! Sabia que apenas um acidente pode te custar <span class="valorGasto"><u>R$9 bilhões</u></span>?<br> Com a nossa proposta o sensor de gás irá te informar sobre qualquer vazamento de gás, auxiliando sua empresa em manter, com mais segurança, o número de acidentes em <span class="acidenteFinal"><u>0</u></span>.`
+        }
+        else{
+            alert('Número inválido! Insira um número maior ou igual a 0.')
+            resultado.innerHTML=`Lembre-se de colocar um número de acidentes válido!`
+        }
+    }
+</script>
+</html>
