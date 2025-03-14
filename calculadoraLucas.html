@@ -8,6 +8,41 @@
     <title>Calculadora financeira!</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo GasBusters">
+            GasBusters</div>
+        <div class="menu">Dados</div>
+    </header>
+    <div class="container">
+        <h2>Calculadora Financeira de Acidentes</h2>
+        <label for="ipt_numAcidentes">Número de Acidentes:</label>
+        <input type="number" id="ipt_numAcidentes" min="0"><br>
+
+        <button onclick="calcular()">Calcular</button><br><br>
+        <h3 id="resultado"></h3>
+    </div>
+    <footer>
+        <div>
+            <p>Informações de contato</p>
+            <p>Telefone: (11) 94465-5562</p>
+            <p>Email: bustergas@gmail.com</p>
+        </div>
+        <div>Quem somos?</div>
+    </footer>
 </body>
+    <script>
+        function calcular(){
+            var numAcidentes = Number(ipt_numAcidentes.value);
+            var custoBase = 9;
+            var custo = 0;
+
+            if(numAcidentes < 1){
+                resultado.innerHTML = `Por favor, insira um número válido de acidentes (1 ou mais).`
+            } else if(numAcidentes >= 1){
+                custo = numAcidentes * custoBase
+                resultado.innerHTML = `Você gastou aproximadamente R$ ${custo} bilhões com reparos para sua empresa, contrate já a Gasbusters e poupe seu dinheiro e dor de cabeça`
+            }
+        }
+    </script>
 </html>
