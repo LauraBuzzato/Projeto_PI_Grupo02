@@ -11,7 +11,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
     .conteúdo {
-        background-color: #831829;
+        
+        text-align: center;
+        background-color: #720d1e;
         border-radius: 10px;
         padding: 40px;
     }
@@ -59,6 +61,8 @@ body{
         font-size: 20px;
         height: 40px;
         width: 100px;
+        display: block;
+        margin: 20px auto;
 
     }
 
