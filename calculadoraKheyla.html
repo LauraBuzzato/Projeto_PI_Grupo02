@@ -14,33 +14,57 @@
     <div class="container">
         <h1>Simulador Financeiro</h1>
 
-        <form class="formulario">
+        <div class="campo">
+            <label for="investimento_inp">Investimento inicial:</label>
+            <input type="number" id="investimento_inp" placeholder="Digite o valor do investimento">
+        </div>
 
-            <div class="campo">
-                <label for="investimento">Investimento inicial:</label>
-                <input type="number" id="investimento" placeholder="Digite o valor do investimento">
-            </div>
+        <div class="campo">
+            <label for="EcoAnual_inp">Economia anual com prevenção de vazamentos:</label>
+            <input type="number" id="EcoAnual_inp" placeholder="Digite a economia anual">
+        </div>
 
-            <div class="campo">
-                <label for="ManMensal">Custo mensal de manutenção:</label>
-                <input type="number" id="ManMensal" placeholder="Digite o custo mensal de manutenção">
-            </div>
+        <div class="campo">
+            <label for="tempo_inp">Tempo estimado para o retorno do investimento (em meses):</label>
+            <input type="number" id="tempo_inp" placeholder="Digite o tempo de retorno">
+        </div>
+        
+        <button onclick="calcular()">Calcular</button>
 
-            <div class="campo">
-                <label for="EcoAnual">Economia anual com prevenção de vazamentos:</label>
-                <input type="number" id="EcoAnual" placeholder="Digite a economia anual">
-            </div>
-
-            <div class="campo">
-                <label for="tempo">Tempo estimado para o retorno do investimento (em meses):</label>
-                <input type="number" id="tempo" placeholder="Digite o tempo de retorno">
-            </div>
-            
-            <button onclick="calcular">Calcular</button>
-
-            <div id="resultado"></div>
-        </form>
+        <div id="resultado"></div>
 
     </div>
+
+    <script>
+        function calcular() {
+            var investimento = Number(investimento_inp.value);
+            var ecoAnual = Number(EcoAnual_inp.value);
+            var tempo = Number(tempo_inp.value);
+
+            if (investimento > 0 && ecoAnual > 0 && tempo > 0) {
+                // Calculando o tempo de retorno do investimento
+                var retornoEmMeses = investimento / ecoAnual * 12;  // Fórmula simples: investimento / economia anual * 12 para meses
+
+                // Comparando o tempo estimado com o tempo de retorno
+                var retornoInvestimento;
+                if (tempo >= retornoEmMeses) {
+                    retornoInvestimento = '<span style="color: green; font-style: italic;">Sim, o retorno do investimento acontecerá dentro do prazo!</span>';
+                } else {
+                    retornoInvestimento = "Infelizmente, o retorno do investimento não será alcançado dentro do prazo.";
+                }
+
+                resultado.innerHTML = `
+                    <p>Investimento inicial: R$${investimento.toFixed(2)}</p>
+                    <p>Economia anual com prevenção de vazamentos: R$${ecoAnual.toFixed(2)}</p>
+                    <p>Tempo estimado para retorno do investimento: ${tempo} meses</p>
+                    <p>${retornoInvestimento}</p>
+                `;
+            } else {
+                alert("Por favor, insira valores válidos!");
+            }
+        }
+    </script>
+
 </body>
+
 </html>
